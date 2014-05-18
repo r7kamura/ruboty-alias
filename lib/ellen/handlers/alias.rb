@@ -9,13 +9,61 @@ module Ellen
         name: "create",
       )
 
-      # Stores alias in robot's brain
+      on(
+        /list alias\z/,
+        description: "List alias",
+        name: "list",
+      )
+
+      on(
+        //,
+        description: "Resolve alias if registered",
+        name: "resolve",
+        hidden: true,
+      )
+
       def create(message)
         from = message[:from]
         to = message[:to]
-        robot.brain.data[NAMESPACE] ||= {}
-        robot.brain.data[NAMESPACE][from] = to
+        table[from] = to
         message.reply("Registered alias: #{from} -> #{to}")
+      end
+
+      def list(message)
+        message.reply(aliases, code: true)
+      end
+
+      def resolve(message)
+        from = message.body.gsub(prefix, "")
+        if aliased = table[from]
+          robot.receive(
+            message.original.merge(
+              body: "#{message.body[prefix]}#{aliased}"
+            )
+          )
+        end
+      end
+
+      private
+
+      def table
+        robot.brain.data[NAMESPACE] ||= {}
+      end
+
+      def aliases
+        if table.empty?
+          "No alias registered"
+        else
+          table.map {|from, to| "%-#{max_from_length}s -> #{to}" % from }.join("\n")
+        end
+      end
+
+      def max_from_length
+        table.keys.map(&:length).max
+      end
+
+      def prefix
+        Ellen::Action.prefix_pattern(robot.name)
       end
     end
   end

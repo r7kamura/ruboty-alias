@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
   spec.summary       = "Ellen plugin to provide message alias."
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/r7kamura/ellen-alias"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "ellen"
+  spec.add_dependency "ellen", ">= 0.2.4"
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
 end
