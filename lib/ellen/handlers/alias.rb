@@ -6,11 +6,11 @@ module Ellen
       on(
         /alias (?<from>.+) -> (?<to>.+)\z/,
         description: "Create alias message",
-        name: "create_alias",
+        name: "create",
       )
 
       # Stores alias in robot's brain
-      def create_alias(message)
+      def create(message)
         from = message[:from]
         to = message[:to]
         robot.brain.data[NAMESPACE] ||= {}
