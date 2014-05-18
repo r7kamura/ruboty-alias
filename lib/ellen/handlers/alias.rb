@@ -16,6 +16,12 @@ module Ellen
       )
 
       on(
+        /delete alias (?<from>.+)\z/,
+        description: "Delete alias",
+        name: "delete",
+      )
+
+      on(
         //,
         description: "Resolve alias if registered",
         name: "resolve",
@@ -27,6 +33,14 @@ module Ellen
         to = message[:to]
         table[from] = to
         message.reply("Registered alias: #{from} -> #{to}")
+      end
+
+      def delete(message)
+        if table.delete(message[:from])
+          message.reply("Deleted")
+        else
+          message.reply("Not found")
+        end
       end
 
       def list(message)
