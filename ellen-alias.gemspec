@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = Ellen::Alias::VERSION
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
-  spec.summary       = "Ellen plugin to provide message alias."
+  spec.summary       = "Remember message alias."
   spec.homepage      = "https://github.com/r7kamura/ellen-alias"
   spec.license       = "MIT"
 

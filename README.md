@@ -1,5 +1,5 @@
 # Ellen::Alias
-Ellen plugin to provide message alias.
+Remember message alias.
 
 ## Install
 ```ruby
