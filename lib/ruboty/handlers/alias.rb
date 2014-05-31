@@ -1,4 +1,4 @@
-module Ellen
+module Ruboty
   module Handlers
     class Alias < Base
       NAMESPACE = "alias"
@@ -77,7 +77,7 @@ module Ellen
       end
 
       def prefix
-        Ellen::Action.prefix_pattern(robot.name)
+        Ruboty::Action.prefix_pattern(robot.name)
       end
     end
   end

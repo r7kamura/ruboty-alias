@@ -1,16 +1,16 @@
-# Ellen::Alias
+# Ruboty::Alias
 Remember message alias.
 
 ## Install
 ```ruby
 # Gemfile
-gem "ellen-alias"
+gem "ruboty-alias"
 ```
 
 ## Usage
 ```
-@ellen alias p -> ping - Register "p" as "ping"
-@ellen p               - Recognize "p" as "ping"
-@ellen list alias      - List registered aliases
-@ellen delete alias    - Delete registered alias
+@ruboty alias p -> ping - Register "p" as "ping"
+@ruboty p               - Recognize "p" as "ping"
+@ruboty list alias      - List registered aliases
+@ruboty delete alias    - Delete registered alias
 ```
