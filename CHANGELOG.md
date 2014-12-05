@@ -1,3 +1,6 @@
+## 0.0.5
+- Support handlers that use :missing action
+
 ## 0.0.4
 - Use non-greedy regexp for aliasing to allow alias of alias
 
