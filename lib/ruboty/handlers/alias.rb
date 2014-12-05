@@ -55,6 +55,9 @@ module Ruboty
               body: "#{message.body[prefix]}#{aliased}"
             )
           )
+          true
+        else
+          false
         end
       end
 
