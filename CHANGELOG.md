@@ -1,3 +1,6 @@
+## 0.0.6
+- Add missing dependency on ruboty version
+
 ## 0.0.5
 - Support handlers that use :missing action
 
