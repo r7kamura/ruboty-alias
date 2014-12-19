@@ -12,5 +12,5 @@ gem "ruboty-alias"
 @ruboty alias p -> ping - Register "p" as "ping"
 @ruboty p               - Recognize "p" as "ping"
 @ruboty list alias      - List registered aliases
-@ruboty delete alias    - Delete registered alias
+@ruboty delete alias p  - Delete registered alias "p"
 ```
