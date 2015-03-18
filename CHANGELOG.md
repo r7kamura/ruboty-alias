@@ -1,3 +1,6 @@
+## 0.0.7
+- Remove indentation from list alias command
+
 ## 0.0.6
 - Add missing dependency on ruboty version
 
