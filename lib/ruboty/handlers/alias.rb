@@ -71,12 +71,8 @@ module Ruboty
         if table.empty?
           "No alias registered"
         else
-          table.map {|from, to| "%-#{max_from_length}s -> #{to}" % from }.join("\n")
+          table.map {|from, to| "#{from} -> #{to}" }.join("\n")
         end
-      end
-
-      def max_from_length
-        table.keys.map(&:length).max
       end
 
       def prefix
