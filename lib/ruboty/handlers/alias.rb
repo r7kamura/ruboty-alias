@@ -4,7 +4,7 @@ module Ruboty
       NAMESPACE = "alias"
 
       on(
-        /alias (?<from>.+?) -> (?<to>.+)\z/,
+        /alias (?<from>.+?) -> (?<to>.+)\z/m,
         description: "Create alias message",
         name: "create",
       )
@@ -16,7 +16,7 @@ module Ruboty
       )
 
       on(
-        /delete alias (?<from>.+)\z/,
+        /delete alias (?<from>.+)\z/m,
         description: "Delete alias",
         name: "delete",
       )
