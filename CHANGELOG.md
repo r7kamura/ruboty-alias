@@ -1,3 +1,6 @@
+## 0.0.8
+- Support multiline pattern
+
 ## 0.0.7
 - Remove indentation from list alias command
 
